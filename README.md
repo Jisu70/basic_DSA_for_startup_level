@@ -72,12 +72,18 @@ console.log(missingNum([1,2,3,4,6]))
 ### Make the array unique 
 
 ```javascript
-let arr = [1,2,2,3,4,4]
-let temp = []
-for (let i = 0; i < arr.length; i++) {
-   if(!temp.includes(arr[i])){
-     temp.push(arr[i])
-   }
+function removeDuplicates(arr) {
+  let temp = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!temp.includes(arr[i])) {
+      temp.push(arr[i]);
+    }
+  }
+  return temp;
 }
-console.log(temp)
+const arr = [1, 2, 2, 3, 4, 4];
+const uniqueArr = removeDuplicates(arr);
+
+console.log(uniqueArr);
+
 ```
