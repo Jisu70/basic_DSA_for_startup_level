@@ -1,35 +1,39 @@
 # DSA_for_startup_level
 
-### How to check a string is PALINDROM 
+### How to check a string is PALINDROM
+
 ```javascript
-function checkPalindrom (str){
-  if (str.split('').reverse().join('') === str ) {
-    return " It was a palindrom string "
-  }else{
-    return " String is not palinddrom "
+function checkPalindrom(str) {
+  if (str.split("").reverse().join("") === str) {
+    return " It was a palindrom string ";
+  } else {
+    return " String is not palinddrom ";
   }
 }
 
-console.log(checkPalindrom("lol"))
+console.log(checkPalindrom("lol"));
 ```
 
-### Find the reapeted element in array 
+### Find the reapeted element in array
+
 ```javascript
-function countOccurence (arr, target) {
-  let hash = {} ;
+function countOccurence(arr, target) {
+  let hash = {};
   for (let i = 0; i < arr.length; i++) {
-    if(!(arr[i] in hash)){
-      hash[arr[i]] = 1
-    }else{
-      hash[arr[i]]++
+    if (!(arr[i] in hash)) {
+      hash[arr[i]] = 1;
+    } else {
+      hash[arr[i]]++;
     }
   }
-  return hash[target]
+  return hash[target];
 }
 
-console.log(countOccurence([1,2,3,1,2,4,5,6,4,5,1], 1))
+console.log(countOccurence([1, 2, 3, 1, 2, 4, 5, 6, 4, 5, 1], 1));
 ```
-### Find the factorial of a Number 
+
+### Find the factorial of a Number
+
 ```javascript
 1.Easy approach
 
@@ -41,12 +45,13 @@ function factorial (num){
   return temp.reduce((acc, cur) => {
     return acc * cur
   },1)
-} 
+}
 console.log(factorial(5))
 ```
-2.Optimal
-```javascript
 
+2.Optimal
+
+```javascript
 function factorial(num) {
   let result = 1;
   for (let i = 2; i <= num; i++) {
@@ -54,22 +59,25 @@ function factorial(num) {
   }
   return result;
 }
-
 ```
-### Missing number in Array 
-```javscript 
+
+### Missing number in Array
+
+```javscript
 function missingNum (arr){
   let n = arr.length + 1 ;
   let sumOfNnumber = n * (n + 1 )/ 2 ;
   let sum = arr.reduce((acc, cur) =>{
-    return acc + cur 
+    return acc + cur
   }, 0)
   return `Missing number in the array is ${sumOfNnumber - sum}`
 }
 
 console.log(missingNum([1,2,3,4,6]))
+
 ```
-### Make the array unique 
+
+### Make the array unique
 
 ```javascript
 function removeDuplicates(arr) {
@@ -85,5 +93,19 @@ const arr = [1, 2, 2, 3, 4, 4];
 const uniqueArr = removeDuplicates(arr);
 
 console.log(uniqueArr);
+```
 
+### Sum of an array without loop or inbuilt function
+
+```javascript
+function calculateSum(arr, index) {
+  if (index < 0) {
+    return 0;
+  }
+  return arr[index] + calculateSum(arr, index - 1);
+}
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let sum = calculateSum(arr, arr.length - 1);
+
+console.log("The sum of the array is: " + sum);
 ```
