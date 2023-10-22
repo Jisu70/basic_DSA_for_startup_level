@@ -63,18 +63,17 @@ function factorial(num) {
 
 ### Missing number in Array
 
-```javscript
-function missingNum (arr){
-  let n = arr.length + 1 ;
-  let sumOfNnumber = n * (n + 1 )/ 2 ;
-  let sum = arr.reduce((acc, cur) =>{
-    return acc + cur
-  }, 0)
-  return `Missing number in the array is ${sumOfNnumber - sum}`
+```javascript
+function missingNum(arr) {
+  let n = arr.length + 1;
+  let sumOfNnumber = (n * (n + 1)) / 2;
+  let sum = arr.reduce((acc, cur) => {
+    return acc + cur;
+  }, 0);
+  return `Missing number in the array is ${sumOfNnumber - sum}`;
 }
 
-console.log(missingNum([1,2,3,4,6]))
-
+console.log(missingNum([1, 2, 3, 4, 6]));
 ```
 
 ### Make the array unique
@@ -108,4 +107,52 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let sum = calculateSum(arr, arr.length - 1);
 
 console.log("The sum of the array is: " + sum);
+```
+
+### Find the lowest negative number from an array
+
+```javascript
+function findMin(arr) {
+  let min = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return min;
+}
+let arr = [1, 2, -1, 5, 8, -5, -8];
+console.log(findMin(arr));
+```
+
+### Find the highest negative number from an array
+
+```javascript
+function findMin(arr) {
+  let min = Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return min;
+}
+let arr = [1, 2, -1, 5, 8, -5, -8];
+console.log(findMin(arr));
+```
+
+### Find the lowest negative number from an array
+
+```javascript
+function findMin(arr) {
+  let min = -Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0 && arr[i] > min) {
+      min = arr[i];
+    }
+  }
+  return min;
+}
+let arr = [1, 2, -1, 5, 8, -5, -8];
+console.log(findMin(arr));
 ```
