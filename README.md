@@ -156,3 +156,51 @@ function findMin(arr) {
 let arr = [1, 2, -1, 5, 8, -5, -8];
 console.log(findMin(arr));
 ```
+
+### maximum sum of a subset of elements in an array
+
+```javascript
+function maximumSubset(arr) {
+  let max = -Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    let temp = 0;
+    for (let j = i; j < arr.length; j++) {
+      temp += arr[j];
+      if (temp > max) {
+        max = temp;
+      }
+    }
+  }
+  return max;
+}
+
+let arr = [1, 2, 3, 4, 5];
+console.log(maximumSubset(arr));
+```
+
+### Count Vowel in string
+
+```javascript
+function countVowel(str) {
+  let obj = {
+    a: 0,
+    e: 0,
+    i: 0,
+    o: 0,
+    u: 0,
+  };
+  let counter = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (obj.hasOwnProperty(str[i])) {
+      counter++;
+      obj[str[i]]++;
+    }
+  }
+  for (let key in obj) {
+    if (obj[key] !== 0) {
+      console.log(`${key} present ${obj[key]} Times`);
+    }
+  }
+  return `Vowel count ${counter}`;
+}
+```
