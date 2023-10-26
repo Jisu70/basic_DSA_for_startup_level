@@ -219,3 +219,12 @@ function decimelToBinary(num) {
 
 console.log(decimelToBinary(10))
 ```
+### Checking odd or even with Bitwise operator 
+
+```javascript
+function checkEvenOdd (num){
+   return (num & 1) === 1 ? `${num} is Odd number ` : `${num} is Even number`
+}
+
+console.log(checkEvenOdd(10))
+```
