@@ -204,3 +204,18 @@ function countVowel(str) {
   return `Vowel count ${counter}`;
 }
 ```
+### Decimal to Binary conversion 
+
+```javascript
+function decimelToBinary(num) {
+    let temp = '';
+    while (num > 0) {
+        let remainder = num % 2;
+        temp += remainder;
+        num = Math.floor(num / 2)
+    }
+    return (temp)
+}
+
+console.log(decimelToBinary(10))
+```
