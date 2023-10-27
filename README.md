@@ -228,3 +228,40 @@ function checkEvenOdd (num){
 
 console.log(checkEvenOdd(10))
 ```
+### Number of 1 Bits
+```javascript
+var hammingWeight = function (n) {
+    let count = 0;
+    while (n != 0) {
+        let lastBit = n & 1;
+        if (lastBit === 1) {
+            count++;
+        }
+        n = n >>> 1;
+    }
+    return count;
+};
+```
+### Counting Bits
+
+```javascript
+var countBits = function(n) {
+    let temp = [] ;
+    for(let i = 0 ; i <= n ; i++ ){
+        let count = hammingWeight(i) ;
+        temp.push(count)
+    }
+    return temp
+};
+var hammingWeight = function (n) {
+    let count = 0;
+    while (n != 0) {
+        let lastBit = n & 1;
+        if (lastBit === 1) {
+            count++;
+        }
+        n = n >>> 1;
+    }
+    return count;
+};
+```
