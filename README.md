@@ -235,6 +235,26 @@ function decimalToBinary (num){
 
 console.log(decimalToBinary(5))
 ```
+
+### Binary to Decimal Converter 
+
+```javascript
+function binaryToDecimal(binaryStr) {
+  let decimal = 0;
+
+  binaryStr = binaryStr.split('').reverse().join('');
+
+  for (let i = 0; i < binaryStr.length; i++) {
+    if (binaryStr[i] === '1') {
+      decimal += Math.pow(2, i);
+    }
+  }
+
+  return decimal;
+}
+
+console.log(binaryToDecimal("1100100")); 
+```
 ### Checking odd or even with Bitwise operator 
 
 ```javascript
