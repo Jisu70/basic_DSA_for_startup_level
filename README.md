@@ -219,6 +219,22 @@ function decimelToBinary(num) {
 
 console.log(decimelToBinary(10))
 ```
+```javascript
+function decimalToBinary (num){
+  let result = '' ;
+  while(num != 0){
+    if(num & 1 === 1 ){
+      result += 1 ;
+    }else{
+      result += 0
+    }
+    num = num >> 1
+  }
+  return result ;
+}
+
+console.log(decimalToBinary(5))
+```
 ### Checking odd or even with Bitwise operator 
 
 ```javascript
