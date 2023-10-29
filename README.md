@@ -314,3 +314,22 @@ function primeNumber (num){
 
 console.log(primeNumber(3))
 ```
+```javascript
+// Optimal Solution
+function primeNumber (num){
+  if(num === 1|| num === 0 ){
+    return `${num} is not a prime number`
+  }
+  for (let i = 2  ; i < Math.sqrt(num) ; i++) {
+    if( num % i === 0 ){
+      return ` ${num }Is not Prime Number `
+    }
+  }
+  return `${num} Is a Prime Number `
+}
+
+console.log(primeNumber(3))
+```
+Let's say we want to check if 97 is a prime number:
+Calculate the square root of 97, which is approximately 9.8496. We'll take the nearest integer square root, which is 9.
+Now, let's examine the divisors of 97. If 97 is not a prime number, it can be factored into two numbers, a and b, where a * b = 97. At least one of these factors must be less than or equal to the square root of 97 (9).square root of 97 (9).So thats why we are only going to check th sqrt
