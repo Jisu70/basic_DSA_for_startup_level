@@ -301,3 +301,16 @@ var hammingWeight = function (n) {
     return count;
 };
 ```
+### Checking Number Is Prime or Not  
+```javascript
+function primeNumber (num){
+  for (let i = 2  ; i < num ; i++) {
+    if( num % i === 0 ){
+      return "Number Is not Prime "
+    }
+  }
+  return " This Is a Prime Number "
+}
+
+console.log(primeNumber(3))
+```
