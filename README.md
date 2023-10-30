@@ -444,3 +444,23 @@ arr.forEach((a, index) => {
 
 console.log([1, 2, 5, 7, 8, 9, 4]);
 ```
+
+### common in every element Or longest common prefix
+
+```javascript
+let arr = ["abc", "ab", "abcd"];
+
+function commonPrefix(arr) {
+  arr.sort((a, b) => a.length - b.length);
+  let prefix = arr[0];
+  let result = "";
+  for (let i = 0; i < prefix.length; i++) {
+    if (prefix[i] == arr[i][i]) {
+      result += prefix[i];
+    }
+  }
+  return result;
+}
+
+console.log(commonPrefix(arr));
+```
