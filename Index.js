@@ -1,24 +1,7 @@
-function countVowel(str) {
-  let obj = {
-    a: 0,
-    e: 0,
-    i: 0,
-    o: 0,
-    u: 0,
-  };
-  let counter = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (obj.hasOwnProperty(str[i])) {
-      counter++;
-      obj[str[i]]++;
-    }
-  }
-  for (let key in obj) {
-    if (obj[key] !== 0) {
-      console.log(`${key} present ${obj[key]} Times`);
-    }
-  }
-  return `Vowel count ${counter}`;
+let arr = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"];
+
+function sortString(arr) {
+  return arr.sort((a, b) => b.split(' ').length - a.split(' ').length);
 }
 
-console.log(countVowel("hello world"));
+console.log(sortString(arr));

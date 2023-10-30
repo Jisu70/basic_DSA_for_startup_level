@@ -32,6 +32,26 @@ function countOccurence(arr, target) {
 console.log(countOccurence([1, 2, 3, 1, 2, 4, 5, 6, 4, 5, 1], 1));
 ```
 
+```javascript
+let arr = [1, 2, 1, 3, 4, 5, 3, 2, 5, 6];
+
+function countDuplicate(arr) {
+  let obj = {};
+  arr.forEach((a) => {
+    if (a in obj) {
+      obj[a]++;
+    } else {
+      obj[a] = 1;
+    }
+  });
+  for (let key in obj) {
+    console.log(`${key} is Present ${obj[key]} Times`);
+  }
+}
+
+console.log(countDuplicate(arr));
+```
+
 ### Find the factorial of a Number
 
 ```javascript
@@ -203,4 +223,42 @@ function countVowel(str) {
   }
   return `Vowel count ${counter}`;
 }
+```
+
+### Sort array by word count
+
+```javascript
+let arr = [
+  "alice and bob love leetcode",
+  "i think so too",
+  "this is great thanks very much",
+];
+
+function sortString(arr) {
+  return arr.sort((a, b) => b.split(" ").length - a.split(" ").length);
+}
+
+console.log(sortString(arr));
+```
+
+```javascript
+let arr = [
+  "alice and bob love leetcode",
+  "i think so too",
+  "this is great thanks very much",
+];
+function sortString(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = 0; j < arr.length - 1 - i; j++) {
+      if (arr[j].split(" ").length < arr[j + 1].split(" ").length) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+
+console.log(sortString(arr));
 ```
