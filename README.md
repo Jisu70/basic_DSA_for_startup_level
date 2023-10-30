@@ -224,6 +224,7 @@ function countVowel(str) {
   return `Vowel count ${counter}`;
 }
 ```
+<<<<<<< HEAD
 
 ### Sort array by word count
 
@@ -262,3 +263,134 @@ function sortString(arr) {
 
 console.log(sortString(arr));
 ```
+=======
+### Decimal to Binary conversion 
+
+```javascript
+function decimelToBinary(num) {
+    let temp = '';
+    while (num > 0) {
+        let remainder = num % 2;
+        temp += remainder;
+        num = Math.floor(num / 2)
+    }
+    return (temp)
+}
+
+console.log(decimelToBinary(10))
+```
+```javascript
+function decimalToBinary (num){
+  let result = '' ;
+  while(num != 0){
+    if(num & 1 === 1 ){
+      result += 1 ;
+    }else{
+      result += 0
+    }
+    num = num >> 1
+  }
+  return result ;
+}
+
+console.log(decimalToBinary(5))
+```
+
+### Binary to Decimal Converter 
+
+```javascript
+function binaryToDecimal(binaryStr) {
+  let decimal = 0;
+
+  binaryStr = binaryStr.split('').reverse().join('');
+
+  for (let i = 0; i < binaryStr.length; i++) {
+    if (binaryStr[i] === '1') {
+      decimal += Math.pow(2, i);
+    }
+  }
+
+  return decimal;
+}
+
+console.log(binaryToDecimal("1100100")); 
+```
+### Checking odd or even with Bitwise operator 
+
+```javascript
+function checkEvenOdd (num){
+   return (num & 1) === 1 ? `${num} is Odd number ` : `${num} is Even number`
+}
+
+console.log(checkEvenOdd(10))
+```
+### Number of 1 Bits
+```javascript
+var hammingWeight = function (n) {
+    let count = 0;
+    while (n != 0) {
+        let lastBit = n & 1;
+        if (lastBit === 1) {
+            count++;
+        }
+        n = n >>> 1;
+    }
+    return count;
+};
+```
+### Counting Bits
+
+```javascript
+var countBits = function(n) {
+    let temp = [] ;
+    for(let i = 0 ; i <= n ; i++ ){
+        let count = hammingWeight(i) ;
+        temp.push(count)
+    }
+    return temp
+};
+var hammingWeight = function (n) {
+    let count = 0;
+    while (n != 0) {
+        let lastBit = n & 1;
+        if (lastBit === 1) {
+            count++;
+        }
+        n = n >>> 1;
+    }
+    return count;
+};
+```
+### Checking Number Is Prime or Not  
+```javascript
+function primeNumber (num){
+  for (let i = 2  ; i < num ; i++) {
+    if( num % i === 0 ){
+      return "Number Is not Prime "
+    }
+  }
+  return " This Is a Prime Number "
+}
+
+console.log(primeNumber(3))
+```
+```javascript
+// Optimal Solution
+function primeNumber (num){
+  if(num === 1|| num === 0 ){
+    return `${num} is not a prime number`
+  }
+  for (let i = 2  ; i < Math.sqrt(num) ; i++) {
+    if( num % i === 0 ){
+      return ` ${num }Is not Prime Number `
+    }
+  }
+  return `${num} Is a Prime Number `
+}
+
+console.log(primeNumber(3))
+```
+Let's say we want to check if 97 is a prime number:
+Calculate the square root of 97, which is approximately 9.8496. We'll take the nearest integer square root, which is 9.
+Now, let's examine the divisors of 97. If 97 is not a prime number, it can be factored into two numbers, a and b, where a * b = 97. At least one of these factors must be less than or equal to the square root of 97 (9).square root of 97 (9).So thats why we are only going to check th sqrt
+>>>>>>> 83c1931c7d20d82c366419c731e62b5badf44184
