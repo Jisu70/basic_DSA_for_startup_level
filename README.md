@@ -387,7 +387,7 @@ function primeNumber(num) {
   if (num === 1 || num === 0) {
     return `${num} is not a prime number`;
   }
-  for (let i = 2; i < Math.sqrt(num); i++) {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) {
       return ` ${num}Is not Prime Number `;
     }
@@ -431,4 +431,16 @@ function twoSum(arr, target) {
 }
 
 console.log(twoSum([1, 2, 3, 4, 5, 6], 6));
+```
+
+### If even make it string
+
+```javascript
+arr.forEach((a, index) => {
+  if (a % 2 === 0) {
+    arr[index] = `${a}`;
+  }
+});
+
+console.log([1, 2, 5, 7, 8, 9, 4]);
 ```
