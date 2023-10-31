@@ -448,18 +448,18 @@ console.log([1, 2, 5, 7, 8, 9, 4]);
 ### common in every element Or longest common prefix
 
 ```javascript
-let arr = ["abc", "ab", "abcd"];
+let arr = ["flower","flow","flight"];
 
 function commonPrefix(arr) {
-  arr.sort((a, b) => a.length - b.length);
   let prefix = arr[0];
-  let result = "";
-  for (let i = 0; i < prefix.length; i++) {
-    if (prefix[i] == arr[i][i]) {
-      result += prefix[i];
+  for (let i = 1 ; i < arr.length; i++) {
+    for (let j = 0 ; j <= arr[i].length; j++) {
+      if(prefix[j] !== arr[i][j]){
+        prefix = prefix.slice(0, j)
+      }
     }
   }
-  return result;
+  return prefix;
 }
 
 console.log(commonPrefix(arr));
