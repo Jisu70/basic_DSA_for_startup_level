@@ -500,5 +500,19 @@ function powerOfX (x, y){
 
 console.log(powerOfX(2, 4))
 
+```
+### Remove element from an array 
+```javascript
+function removeEm (arr, target){
+    let index = arr.indexOf(target)
+    if(index === -1) {return arr}
+  for (let i = index ;  i < arr.length - 1 ; i++) {
+    arr[i] = arr[i + 1]
+  }
+  arr.pop()
+  return arr
+}
 
+
+console.log(removeEm([1,2,3,4,5,6], 1))
 ```
