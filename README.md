@@ -476,3 +476,29 @@ function commonPrefix(arr) {
 
 console.log(commonPrefix(arr));
 ```
+### Power of N 
+Recursive
+```javascript
+function powerOfX (x, y){
+  if ( y === 1 ){
+    return x
+  }
+  return x * powerOfX(x, y - 1 )
+}
+
+console.log(powerOfX(2, 4))
+```
+Using Loop 
+```javascript
+function powerOfX (x, y){
+  let temp = 1  ;
+  for (let i = 1 ; i <= y ; i++) {
+    temp *= x
+  }
+  return temp 
+}
+
+console.log(powerOfX(2, 4))
+
+
+```
