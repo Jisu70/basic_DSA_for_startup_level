@@ -80,6 +80,18 @@ function factorial(num) {
   return result;
 }
 ```
+Factorial Using Recursion 
+```javascript
+function factorialWithRecursion(n) {
+  if (n <= 1) {
+    return 1;
+  }
+  return n * factorialWithRecursion(n - 1);
+}
+
+
+console.log(factorialWithRecursion(5))
+```
 
 ### Missing number in Array
 
