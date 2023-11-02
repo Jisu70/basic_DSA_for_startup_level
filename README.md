@@ -516,3 +516,18 @@ function removeEm (arr, target){
 
 console.log(removeEm([1,2,3,4,5,6], 1))
 ```
+### Shuffel the array 
+```javascript
+let arr = [1,2,3,4,5,6] ;
+var shuffle = function(nums, n) {
+    let temp = nums.slice(n) ;
+    let result = [] ;
+    for( let i = 0 ; i < n ; i++){
+        result.push(nums[i]) ;
+        result.push(temp[i])
+    }
+    return result ;
+};
+
+console.log(shuffle(arr, 3))
+```
