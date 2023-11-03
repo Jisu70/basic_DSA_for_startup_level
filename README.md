@@ -545,3 +545,16 @@ let temp = arr.filter((a) => {
 
 console.log(temp)
 ```
+### Reverse an array 
+```javascript
+function reverseArray (arr){
+  let length = arr.length ;
+  for (let i = 0; i < Math.floor(length/2) ; i++) {
+    temp = arr[i] ;
+    arr[i] = arr[arr.length - 1 - i ] ;
+    arr[arr.length - 1 - i ] = temp 
+  }
+  return arr ;
+} 
+console.log(reverseArray([1,2,3,4,5]))
+```
