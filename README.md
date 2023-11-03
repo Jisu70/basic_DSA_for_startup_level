@@ -558,3 +558,21 @@ function reverseArray (arr){
 } 
 console.log(reverseArray([1,2,3,4,5]))
 ```
+
+### If array was unique return false else true 
+```javascript
+function isDistinct (arr){
+  let obj = {} ;
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr[i]
+    if(obj[num]){
+      return true
+    }
+    obj[num] = true
+  }
+  console.log(obj)
+  return false
+} 
+
+console.log(isDistinct([1,2,3,4]))
+```
