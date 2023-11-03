@@ -531,3 +531,17 @@ var shuffle = function(nums, n) {
 
 console.log(shuffle(arr, 3))
 ```
+### Common in Both array 
+```javascript
+let arr = [1,2,4,5,6] ;
+
+let arr2 =  [6,4,3,1,2] ;
+
+let temp = arr.filter((a) => {
+  if (arr2.includes(a)){
+    return a ;
+  }
+}) 
+
+console.log(temp)
+```
