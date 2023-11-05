@@ -576,3 +576,23 @@ function isDistinct (arr){
 
 console.log(isDistinct([1,2,3,4]))
 ```
+### All the Missing nunber from an Array 
+```javascript
+function findMissing(arr) {
+  const numSet = new Set(arr);
+  const start = Math.min(...arr);
+  const end = Math.max(...arr);
+  const missing = [];
+  console.log(numSet)
+  for (let i = start; i <= end; i++) {
+    if (!numSet.has(i)) {
+      missing.push(i);
+    }
+  }
+
+  return missing;
+}
+
+console.log(findMissing([1, 3, 4, 7]));
+
+```
