@@ -530,6 +530,22 @@ var shuffle = function(nums, n) {
 };
 
 console.log(shuffle(arr, 3))
+```javascript
+function shuffleItem(arr) {
+  let result = [];
+  const middle = Math.floor(arr.length / 2);
+  for (let i = 0; i < middle; i++) {
+    result.push(arr[i]);
+    result.push(arr[middle + i]);
+  }
+  if (arr.length % 2 !== 0) {
+    result.push(arr[arr.length - 1]); // Add the last element for odd-length arrays
+  }
+  return result;
+}
+
+console.log(shuffleItem([1, 2, 3, 4, 5, 6, 7]));
+
 ```
 ### Common in Both array 
 ```javascript
