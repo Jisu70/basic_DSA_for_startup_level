@@ -596,3 +596,15 @@ function findMissing(arr) {
 console.log(findMissing([1, 3, 4, 7]));
 
 ```
+### Find the only missing number in arrray 
+```javascript
+function findSignleMissingEm (arr) {
+ let n = arr.length + 1 ;
+ let sumOfNnumber = n * (n + 1)/2 ;
+ let sum = arr.reduce((acc, cur) => {
+   return acc + cur ;
+ }, 0)
+ return sumOfNnumber - sum ;
+}
+console.log(findSignleMissingEm([1,2,3,4,5,7]))
+```
