@@ -626,3 +626,25 @@ function findSignleMissingEm (arr) {
 }
 console.log(findSignleMissingEm([1,2,3,4,5,7]))
 ```
+### Add to Array-Form of Integer
+```javascript
+var addToArrayForm = function (arr, k) {
+  let carry = 0 ;
+  let result = [] ;
+  for (let i = arr.length - 1 ; i >= 0 || k > 0 ; i--) {
+      let lastOfArr =  i >= 0 ? arr[i] : 0 ; 
+    let lastOfK = k % 10 ;
+    let sum = lastOfArr + carry + lastOfK ;
+    result.unshift(sum % 10) ;
+    carry = Math.floor(sum / 10)
+    k = Math.floor( k / 10 )
+  }
+  if( carry > 0 ){
+    result.unshift(carry)
+  }
+  return result
+};
+
+
+console.log(addToArrayForm([2,1,5], 806))
+```
