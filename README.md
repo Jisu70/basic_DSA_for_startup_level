@@ -530,6 +530,8 @@ var shuffle = function(nums, n) {
 };
 
 console.log(shuffle(arr, 3))
+```
+
 ```javascript
 function shuffleItem(arr) {
   let result = [];
