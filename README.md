@@ -141,7 +141,7 @@ let sum = calculateSum(arr, arr.length - 1);
 console.log("The sum of the array is: " + sum);
 ```
 
-### Find the lowest negative number from an array
+### Find the highest negative number from an array
 
 ```javascript
 function findMin(arr) {
@@ -157,7 +157,7 @@ let arr = [1, 2, -1, 5, 8, -5, -8];
 console.log(findMin(arr));
 ```
 
-### Find the highest negative number from an array
+### Find the lowest negative number from an array
 
 ```javascript
 function findMin(arr) {
