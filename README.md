@@ -648,3 +648,28 @@ var addToArrayForm = function (arr, k) {
 
 console.log(addToArrayForm([2,1,5], 806))
 ```
+### Valide Bracket 
+
+```javascript
+function valideString (str) {
+  let stack = []
+  for (let i = 0; i < str.length; i++) {
+    if( str[i] === '(' || str[i] === '{' || str[i] === "["){
+      stack.push(str[i])
+    }else{
+      if(str[i] === ')' && stack[stack.length - 1] === '('){
+        stack.pop()
+      }
+      if(str[i] === '}' && stack[stack.length - 1] === '{'){
+        stack.pop()
+      }
+      if(str[i] === ']' && stack[stack.length - 1] === '['){
+        stack.pop()
+      }
+    }
+  }
+  return stack.length === 0 ? true : false
+}
+
+console.log(valideString("({[]})"))
+```
