@@ -13,6 +13,18 @@ function checkPalindrom(str) {
 
 console.log(checkPalindrom("lol"));
 ```
+```javascript
+function reverse (num){
+  let result = num.toString().split('').reverse().join('') ;
+  if(result.endsWith('-')){
+    return '-' + parseInt(result)
+  }
+  return result
+}
+
+
+console.log(reverse(-321))
+```
 
 ### Find the reapeted element in array
 
