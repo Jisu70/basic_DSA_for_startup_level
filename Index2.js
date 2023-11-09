@@ -1,25 +1,21 @@
-const { Sequelize, DataTypes } = require('sequelize');
+const express = require('express');
+const app = express();
+const port = 3000; // You can choose your preferred port
 
-const sequelize = new Sequelize('your_database', 'your_username', 'your_password', {
-  host: 'localhost',
-  dialect: 'mysql', // or your preferred database
+// Define a route to fetch reviews
+app.get('/reviews', async (req, res) => {
+  try {
+    const reviews = await Review.findAll({
+      attributes: ['reviewId', 'reviewTitle', 'reviewTags'],
+    });
+
+    res.json(reviews);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
-const Review = sequelize.define('Review', {
-  reviewId: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-  },
-  reviewTitle: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  reviewTags: {
-    type: DataTypes.ARRAY(DataTypes.STRING), // Assuming you want to store tags as an array of strings
-  },
-  // Add other fields like reviewRating, companyId, customerId, and reviewStatus
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
-
-// Create the table if it doesn't exist
-sequelize.sync();
