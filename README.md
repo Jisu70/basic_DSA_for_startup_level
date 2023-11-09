@@ -685,3 +685,19 @@ function valideString (str) {
 
 console.log(valideString("({[]})"))
 ```
+### Fibonacci using recursion 
+```javascript
+function fibonacci (first, second, n, result = []){
+  if (n == 0 ){
+    return result
+  }
+  result.push(first) ;
+  let third = first + second ;
+  return fibonacci(second, third, n - 1, result )
+} 
+
+
+let first = 0 ;
+let second = 1 ;
+console.log(fibonacci(first, second, 10))
+```
