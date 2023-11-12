@@ -701,3 +701,21 @@ let first = 0 ;
 let second = 1 ;
 console.log(fibonacci(first, second, 10))
 ```
+### Transpose Matrix 
+```javascript
+function transposeMatrix (arr){
+  let result = [] ;
+  let count = 0  ;
+  for (let i = 0; i < arr[0].length; i++) {
+    let temp = []
+    for (var j = 0; j < arr.length; j++) {
+      temp.push(arr[j][count]) ;
+    }
+    result.push(temp) ;
+    count++ ;
+  }
+  return result ;
+}
+
+console.log(transposeMatrix([[1,2,3], [4, 5, 6]]))
+```
