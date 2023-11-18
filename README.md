@@ -737,3 +737,21 @@ function moveZero (arr){
 
 console.log(moveZero(arr))
 ```
+Another approach 
+```javascript
+let arr = [0,1,2,0,3,0] ;
+function moveZero (arr){
+  for (let i = 0; i < arr.length - 1 ; i++) {
+    for (var j = 0; j < arr.length - 1 - i ; j++) {
+      if(arr[j] === 0){
+        let temp = arr[j] ;
+        arr[j] = arr[j+1] ;
+        arr[j+1] = temp ;
+      }
+    }
+  }
+  return arr ;
+}
+
+console.log(moveZero(arr))
+```
