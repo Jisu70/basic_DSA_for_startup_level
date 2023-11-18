@@ -719,3 +719,21 @@ function transposeMatrix (arr){
 
 console.log(transposeMatrix([[1,2,3], [4, 5, 6]]))
 ```
+### Shift zero to the last 
+```javascript
+let arr = [0,1,2,0,3,0] ;
+function moveZero (arr){
+  let arrayWithZero = [] ;
+  let arrayWithElement = [] ;
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i] !== 0 ){
+      arrayWithElement.push(arr[i]) ;
+    }else{
+     arrayWithZero.push(arr[i]) ;
+    }
+  }
+  return arrayWithElement.concat(arrayWithZero)
+}
+
+console.log(moveZero(arr))
+```
