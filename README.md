@@ -755,3 +755,12 @@ function moveZero (arr){
 
 console.log(moveZero(arr))
 ```
+### Print a to z without using external library or predefined array or object of letter or string.
+```javascript
+const aValue = 'a'.charCodeAt('0');
+const zValue = 'zValue'.charCodeAt('0');
+
+ for (let i = aValue; i <= zValue; i++){
+   console.log(String.fromCharCode(i))
+ };
+```
