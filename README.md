@@ -26,6 +26,15 @@ function reverse (num){
 console.log(reverse(-321))
 ```
 
+```javascript
+function palindromWithRecursion(str){
+  if(str.length === 1 ) return true;
+  if(str[0] !== str[str.length-1]) return false;
+  return palindromWithRecursion(str.slice(1, -1))
+}
+  console.log(palindromWithRecursion('madam'))
+```
+
 ### Find the reapeted element in array
 
 ```javascript
